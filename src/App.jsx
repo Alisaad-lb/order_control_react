@@ -47,7 +47,7 @@ function App() {
   <div className="btn-group ">
   <Link to= {"/Technologist"}> <button   className="btn m ">Technologist </button></Link>
   <Link to= {"/Department"}><button   className="btn m-5">Department </button></Link>
-  <Link to= {"/Member"}><button   className="btn m-5">Member </button></Link>
+  {/* <Link to= {"/Member"}><button   className="btn m-5">Member </button></Link> */}
 </div>
 </div>
 
@@ -59,7 +59,7 @@ function App() {
 }}>
 
    <Routes>
-<Route  Member        path='/Member'        element=    {<Member/>}/>
+{/* <Route  Member        path='/Member'        element=    {<Member/>}/> */}
 <Route  Technologist  path='/Technologist'  element=   {<Technologist/>}/>
 <Route  Department    path='/Department'    element=    {<Department/>}/>
 <Route  BendingLine   path='/BendingLine'   element=    {<BendingLine/>}/>
