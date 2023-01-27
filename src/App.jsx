@@ -22,10 +22,10 @@ function App() {
   const [orderItems, setOrderItems] = useState()
 
   function fetching() {
-    axios("http://localhost:3000/departments").then(i => setDepartments(i.data))
-    axios("http://localhost:3000/items").then(i => setItems(i.data))
-    axios("http://localhost:3000/orders").then(i => setOrders(i.data))
-    axios("http://localhost:3000/orderItems").then(i => setOrderItems(i.data))
+    axios("https://order-control-api.onrender.com/departments").then(i => setDepartments(i.data))
+    axios("https://order-control-api.onrender.com/items").then(i => setItems(i.data))
+    axios("https://order-control-api.onrender.com/orders").then(i => setOrders(i.data))
+    axios("https://order-control-api.onrender.com/orderItems").then(i => setOrderItems(i.data))
   }
 
   

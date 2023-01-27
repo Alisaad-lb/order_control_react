@@ -35,7 +35,7 @@ function Technologist() {
   
     // create order and get its id
     axios
-      .post("http://localhost:3000/orders", { department_id: 1 })
+      .post("https://order-control-api.onrender.com/orders", { department_id: 1 })
       .then((i) => setCreatedOrder(i.data));
 
     let count = 0;
@@ -49,7 +49,7 @@ function Technologist() {
       
 
       axios
-        .post("http://localhost:3000/orderItems", {
+        .post("https://order-control-api.onrender.com/orderItems", {
           item_id: count,
           // item_id: foundItem.id,
           quantity: 3,
@@ -65,8 +65,8 @@ function Technologist() {
   };
 
   useEffect(() => {
-    axios("http://localhost:3000/items").then(i => setItems(i.data))
-    axios("http://localhost:3000/orders").then(i => setOrders(i.data))
+    axios("https://order-control-api.onrender.com/items").then(i => setItems(i.data))
+    axios("https://order-control-api.onrender.com/orders").then(i => setOrders(i.data))
   },[])
 
   return (

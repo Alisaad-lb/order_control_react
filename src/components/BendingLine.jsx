@@ -15,7 +15,7 @@ function BendingLine() {
   function moveOrder(e) {
     let re = orders.filter((i) => i.id != e.target.name);
     setOrders((i) => re);
-    axios.put(`http://localhost:3000/orders/${e.target.name}`, {
+    axios.put(`https://order-control-api.onrender.com/orders/${e.target.name}`, {
       department_id: 2,
     });
   }
@@ -24,7 +24,7 @@ function BendingLine() {
 
     let result = orderItems?.find((i) => i.id == e.target.name);
     const { isDone, quantity, item_id, order_id } = result;
-    axios.put(`http://localhost:3000/orderItems/${e.target.name}`, {
+    axios.put(`https://order-control-api.onrender.com/orderItems/${e.target.name}`, {
       isDone: !isDone,
       quantity: quantity,
       item_id: item_id,
@@ -42,15 +42,15 @@ function BendingLine() {
   }
 
   function callOrders() {
-    axios("http://localhost:3000/orders").then((i) => setOrders(i.data));
+    axios("https://order-control-api.onrender.com/orders").then((i) => setOrders(i.data));
   }
 
   function callItems() {
-    axios("http://localhost:3000/items").then((i) => setItems(i.data));
+    axios("https://order-control-api.onrender.com/items").then((i) => setItems(i.data));
   }
 
   function callOrderItems() {
-    axios("http://localhost:3000/orderitems").then((i) =>
+    axios("https://order-control-api.onrender.com/orderitems").then((i) =>
       setOrderItems(i.data)
     );
   }
